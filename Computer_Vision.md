@@ -2,7 +2,7 @@
 ### Image Classification
 => 인풋 이미지가 어떤 라벨(Label)에 대응되는지 인풋 이미지에 대한 분류 (Classification)를 수행하는 문제 영역.  
 [EX), 이 이미지는 강아지이다, 이 이미지는 고양이이다.]  
-<img width="417" alt="스크린샷 2022-11-01 오후 1 57 32" src="https://user-images.githubusercontent.com/87309905/199162165-e14d922e-926d-46e3-a65e-dad2b7cf395c.png">
+<img width="417" alt="스크린샷 2022-11-01 오후 1 57 32" src="https://user-images.githubusercontent.com/87309905/199162165-e14d922e-926d-46e3-a65e-dad2b7cf395c.png">  
 
 
 ### Face Detection  
@@ -94,14 +94,14 @@
 <img width="705" alt="스크린샷 2022-11-01 오후 2 06 14" src="https://user-images.githubusercontent.com/87309905/199163046-3844e84c-eb46-4ff4-b0db-f5b151a20e2d.png">
 
 [ 이미지 출처 ]
-https://arxiv.org/abs/1902.10859
-https://github.com/commaai/research
-https://arxiv.org/abs/1609.04802
-https://arxiv.org/abs/1411.4555
-https://arxiv.org/abs/2001.00179
-https://arxiv.org/abs/2001.00179
-https://arxiv.org/abs/1505.03540
-https://www.tugraz.at/fileadmin/user_upload/Institute/ICG/Documents/lrs/pubs/koestinger_cvpr_2012.pdf
-https://arxiv.org/abs/1806.10726
-https://arxiv.org/abs/1903.06593
+https://arxiv.org/abs/1902.10859  
+https://github.com/commaai/research  
+https://arxiv.org/abs/1609.04802  
+https://arxiv.org/abs/1411.4555  
+https://arxiv.org/abs/2001.00179  
+https://arxiv.org/abs/2001.00179  
+https://arxiv.org/abs/1505.03540  
+https://www.tugraz.at/fileadmin/user_upload/Institute/ICG/Documents/lrs/pubs/koestinger_cvpr_2012.pdf  
+https://arxiv.org/abs/1806.10726  
+https://arxiv.org/abs/1903.06593  
 
