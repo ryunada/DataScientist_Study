@@ -1,6 +1,6 @@
 # DataScientist_Study
 
-## 📂Folder
-### MachineLearning
-### Computer Vision
-### DeepLearning
+## 📂 Folder
+### 📂 MachineLearning
+### 📂 Computer Vision
+### 📂 DeepLearning
