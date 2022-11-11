@@ -6,6 +6,6 @@
 #### [📂 MarkDown ](https://github.com/ryunada/DataScientist_Study/blob/main/MarkDown.md)
 
 ### Technology
-#### [📂MachineLearning](https://github.com/ryunada/DataScientist_Study/tree/main/MachineLearning) 
-#### [📂](https://github.com/ryunada/DataScientist_Study/tree/main/CoumputerVision) Computer Vision
-#### ]📂 DeepLearning]
+#### [📂 MachineLearning](https://github.com/ryunada/DataScientist_Study/tree/main/MachineLearning) 
+#### [📂 Computer Vision](https://github.com/ryunada/DataScientist_Study/tree/main/CoumputerVision) 
+#### [📂 DeepLearning]()
