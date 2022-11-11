@@ -70,7 +70,54 @@ Document SubTitle
 >	> This is a second blockqute.
 >	>	> This is a third blockqute.
 ```
+
 > This is a first blockqute.
->	> This is a second blockqute.
->	>	> This is a third blockqute.
+>> This is a second blockqute.
+>>> This is a third blockqute.
+
+
+### 2.3. 목록
+#### - 순서있는 목록(번호)
+순서있는 목록은 숫자와 점을 사용한다.
+```markdown
+1. 첫번째
+2. 두번째
+3. 세번째
+```
+
+1. 첫번째
+2. 두번째
+3. 세번째
+
+현재까지는 어떤 번호를 입력해도 순서는 내림차순으로 정의된다.
+```markdown
+1. 첫번째
+3. 세번째
+2. 두번째 
+```
+
+1. 첫번째
+2. 세번째
+3. 두번째
+
+#### - 순서없는 목록(글머리 기호 : )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
