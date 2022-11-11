@@ -8,6 +8,18 @@ MarkDown 문법 정리
 > > > #### 1.2.1 장점  
 > > > #### 1.2.2 단점  
 
+> ## 2. 마크다운 문법
+> > ### 2.1 헤더(Header)
+> > ### 2.2 BlockQuote
+> > ### 2.3 목록
+> > > #### I. 순서있는 목록(번호)
+> > >  #### II. 순서 없는 목록(글머리 기호 : `*`,`+`,`-` 지원)
+
+> > ### 2.4 코드
+> > > #### 2.4.1 들여쓰기
+
+
+
 ---
 ## 1. 마크다운
 
@@ -85,7 +97,7 @@ Document SubTitle
 
 ---
 ### 2.3. 목록
-#### - 순서있는 목록(번호)
+#### I. 순서있는 목록(번호)
 순서있는 목록은 숫자와 점을 사용한다.
 ```markdown
 1. 첫번째
@@ -108,7 +120,7 @@ Document SubTitle
 2. 세번째
 3. 두번째
 
-#### - 순서없는 목록(글머리 기호 : `*`,`+`,`-` 지원)
+#### II. 순서없는 목록(글머리 기호 : `*`,`+`,`-` 지원)
 ``` markdown
 * 첫번째 글머리
     * 두번째 글머리
@@ -147,9 +159,32 @@ Document SubTitle
 
 ---
 ### 2.4. 코드
+4개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되기 시작하여 들여쓰지 않은 행을 만날때까지 변환이 계속된다.  
+#### 2.4.1 들여쓰기
+```python
+This is a normal paragraph:
 
+    This is a code block.
+    
+end code block.
+```
+This is a normal paragraph:
 
+    This is a code block.
+    
+end code block.
 
+> 한줄 띄어쓰지 않으면 인식이 제대로 안되는 문제 발생
+
+```python
+This is a normal paragraph:
+    This is a code block.
+end code block.
+```
+
+This is a normal paragraph:
+    This is a code block.
+end code block.
 
 
 
