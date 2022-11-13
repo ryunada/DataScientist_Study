@@ -182,11 +182,43 @@ This is a normal paragraph:
 end code block.
 ```
 
+---
+
 This is a normal paragraph:
     This is a code block.
 end code block.
 
+---
+#### 2.4.2. 코드블럭
+코드블럭은 다음과 같이 2가지 방식을 사용할 수 있습니다.:
+- ```<pre><code>{code}</code></pre>```이용방식
 
+``` python
+<pre>
+<code>
+public class BootSpringBootApplication{
+   public static void main(String[] args){
+      System.out.println("Hello, Honeymon");
+   }
+}
+</code>
+</pre>
+```
+
+```python
+public class BootSpringBootApllication{
+   public static void main(String[] args){
+      System.out.println("Hello, Honeymon");
+   }
+}
+```
+
+- 코드블럭코드("```")을 이용하는 방법
+```python
+```
+   public class BootSpringBootApplication
+```
+```
 
 
 
