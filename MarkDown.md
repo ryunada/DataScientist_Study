@@ -196,36 +196,60 @@ end code block.
 ``` python
 <pre>
 <code>
-public class BootSpringBootApplication{
-   public static void main(String[] args){
-      System.out.println("Hello, Honeymon");
-   }
-}
+    print("```<pre<code>{code}</code></pre>```이렇게 코드 작성 가능")
 </code>
 </pre>
 ```
 
 ```python
-public class BootSpringBootApllication{
-   public static void main(String[] args){
-      System.out.println("Hello, Honeymon");
-   }
-}
+for i in range(0,100):
+    print('집가고 싶다.')
 ```
 
 - 코드블럭코드("```")을 이용하는 방법
 ```python
 ```
-   public class BootSpringBootApplication
+   Write code here
 ```
 ```
 
+```
+Write code here
+```
+
+깃허브에서는 코드블럭코드("```") 시작점에 사용하는 언어를 선언하여 문법강조(Syntax Highlighting)이 가능하다.
 
 
+```python
+print('Welcome to Python')
+``` 
 
+---
+### 2.5. 수평선 `<hr/>`
+```python
+* * *
+***
+*****
+- - -
+-----------------------------------------------
+```
+적용 예시
+* * *
+***
+*****
+- - -
+-----------------------------------------------
+### 2.6 링크
+- 참조 링크
+```
+[link keyword][id]
+[id]: URL "Optional Title here"
+// code
+Link: [Google][googlelink]
+[googlelink]: https://google.com "Go google"
+```
 
-
-
+Link:Google
 
 
 
