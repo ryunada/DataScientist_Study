@@ -249,8 +249,18 @@ Link: [Google][googlelink]
 [googlelink]: https://google.com "Go google"
 ```
 
-Google Link: [Google][http://google.com]
+Google Link : [Google][http://google.com]
 
+- 외부 링크
+```python
+사용문법 : [Title](link)
+적용예 : [Google](https://google.com, "Google Link")
+```
+[Google Link(https://google.com, "Google Link"]
+
+- 자동연결
+```python
+```
 
 
 
