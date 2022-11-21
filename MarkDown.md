@@ -249,10 +249,7 @@ Link: [Google][googlelink]
 [googlelink]: https://google.com "Go google"
 ```
 
-[link keyword][id]
-[id]: URL "Optional Title here"
-// code
-Link: [Google][httpL//google.com]
+Google Link: [Google][http://google.com]
 
 
 
