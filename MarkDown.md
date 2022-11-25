@@ -260,10 +260,22 @@ Link : [Google](https://google.com, "google link")
 
 - 자동연결
 ```python
+일반적인 URL 혹은 이메일주 소인 경우 적절한 형식으로 링크를 형성한다.
 
+* 외부 링크 : <http://example.com/>
+* 이메일 링크 : <example@email.com>
 ```
+* 외부 링크 : <http://example.com/>
+* 이메일 링크 : <example@email.com>
 
-
+### 2.7. 강조
+```python
+* single asterisks *
+_single underscores_
+**double asterisks**
+__double underscores__
+~~cancelline~~
+```
 
 
 
