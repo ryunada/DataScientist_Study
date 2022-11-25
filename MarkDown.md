@@ -256,12 +256,11 @@ Google Link : [Google][http://google.com]
 사용문법 : [Title](link)
 적용예 : [Google](https://google.com, "Google Link")
 ```
-[Title](link)
-[Google](https://google.com, "google link")
-
+Link : [Google](https://google.com, "google link")
 
 - 자동연결
 ```python
+
 ```
 
 
