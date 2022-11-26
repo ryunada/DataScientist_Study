@@ -282,7 +282,42 @@ _single underscores_
 __double underscores__
 ~~cancelline~~
 
-> 문장 중간에 사용할 경우에는 **띄어쓰기를** 사용하는 것이 좋다.
-> 문장 중간에 사용할 경우에는 띄어쓰기를 사용하는 것이 좋다.
+> ```문장 중간에 사용할 경우에는 **띄어쓰기**를 사용하는 것이 좋다.```
+> 문장 중간에 사용할 경우에는 **띄어쓰기**를 사용하는 것이 좋다.
+
+---
+### 2.8. 이미지
+---
+```
+![image](https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png)
+![image](https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png "Optional title")
+```
+
+![image](https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png)
+![image](https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png "Optional title")
+
+사이즈 조절 기능이 없기 때문에  ```<img witdh="" height=""></img>```를 이용한다.
+
+예
+
+```
+<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png"></img>
+```
+<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png"></img>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
