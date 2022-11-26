@@ -301,14 +301,28 @@ __double underscores__
 예
 
 ```
-<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png" width="450px" height="300px", title="px(픽셀) 크기 설정" alt="Black"></img><br/>
-<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png" width="40%" height="30%", title="px(픽셀) 크기 설정" alt="Black"></img><
+<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="Black"></img><br/>
+<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="Black"></img><
 ```
 <img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="Black"></img><br/>
 <img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="Black"></img>
 
+---
+### 2.9. 줄바꿈
+---
+3칸 이상띄어쓰기(```   ```)를 하면 줄이 바뀐다.
+```
+* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다. 
+이렇게
 
+* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다.___\\ 띄어쓰기
+이렇게
+```
+* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다. 
+이렇게
 
+* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다.___\\ 띄어쓰기
+이렇게
 
 
 
