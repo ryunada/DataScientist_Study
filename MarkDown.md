@@ -301,9 +301,12 @@ __double underscores__
 예
 
 ```
-<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png"></img>
+<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png" width="450px" height="300px", title="px(픽셀) 크기 설정" alt="Black"></img><br/>
+<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png" width="40%" height="30%", title="px(픽셀) 크기 설정" alt="Black"></img><
 ```
-<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png"></img>
+<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png" width="450px" height="300px", title="px(픽셀) 크기 설정" alt="Black"></img><br/>
+<img src="https://user-images.githubusercontent.com/87309905/204093936-90bad287-30e4-4ae5-ab7c-17c6b36377f3.png" width="40%" height="30%", title="px(픽셀) 크기 설정" alt="Black"></img><
+
 
 
 
