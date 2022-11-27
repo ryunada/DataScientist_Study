@@ -1,6 +1,13 @@
 # Crawling 
-I. chrome 버전 확인 
-  - chrome 
+I. Chrome 버전 확인 
+  - Chrome 오른쪽 상단 <img width="12" alt="스크린샷 2022-11-27 오후 3 00 56" src="https://user-images.githubusercontent.com/87309905/204121527-ec567ccc-7b99-4102-9e47-fd526f4d9869.png"> 클릭
+  - 설정 클릭
+  - Chrome 정보 클릭
+  - 버전 확인
+II. Chrome 버전에 맞춰 Chrome driver 다운로드
+  - chromedriver.exe 경로 확인 (window)
+  - chromedriver 경로 확인 (mac)
+
 
 ## 라이브러리 임포트
 ```python 
