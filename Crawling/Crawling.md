@@ -35,5 +35,20 @@ df_dict = list(df_dict['크롤링할 키워드 csv 열 이름'].values())
 
 for i in range(len(df_dict)):
   페이지에서 할 것들
+  ex)
+  driver.find_element_by_id('item_keyword1').send_keys(df_dict[i])
+  # 뒤로가기
+  driver.back()
 ```
+
+| element(단일), elements(복수) | 설명 |
+|:-------------------------|:--|
+| By.ID | 태그의 id값으로 추출 |
+| By.NAME | 태그의 name값으로 추출 |
+| By.XPATH | 태그의 경로로 추출 |
+| By.LINK_TEXT | 링크 텍스트값으로 추출 |
+| By.PARTIAL_LINK_TEXT | 링크 텍스트의 자식 텍스트 값을 추출 |
+| By.TAG_NAME | 태그 이름으로 추출 |
+| By.CLASS_NAME | 태그의 클래스명으로 추출 |
+| By.CSS+SELECTOR | css선택자로 추출 |
 
