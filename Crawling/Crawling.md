@@ -52,3 +52,65 @@ for i in range(len(df_dict)):
 | By.CLASS_NAME | 태그의 클래스명으로 추출 |
 | By.CSS+SELECTOR | css선택자로 추출 |
 
+---
+
+# naverTrend Crawling
+from selenium import webdriver as wd
+import time
+import pandas as pd
+
+# 크롬 브라우저 위치 설정
+driver = wd.Chrome('C:/Users/rst30/Desktop/1st_Project/ChromeDriver(win)/chromedriver.exe')
+# 크롬 브라우저를 통하여 웹사이트 가져오기
+driver.get('https://datalab.naver.com/keyword/trendSearch.naver')
+
+# 레시피 명이 적힌 csv 불러오기
+df = pd.read_csv('C:/Users/rst30/Desktop/1st_Project/Data/RCPTitle.csv')
+# print(df.head())
+
+# 딕셔너리 형태로 가져오기
+df_dict = df.to_dict()
+df_dict = list(df_dict['RCP_NM'].values())
+
+for i in range(len(df_dict)):
+    # 키워드
+    driver.find_element_by_id('item_keyword1').send_keys(df_dict[i])
+    # 시작 년도 월 일
+    driver.find_element_by_id('startYear').click()
+    driver.find_element_by_xpath('//*[@id="startYearDiv"]/ul/li[6]/a').click()
+    driver.find_element_by_id('startMonth').click()
+    driver.find_element_by_xpath('//*[@id="startMonthDiv"]/ul/li[1]/a').click()
+    driver.find_element_by_id('startDay').click()
+    driver.find_element_by_xpath('//*[@id="startDayDiv"]/ul/li[1]/a').click()
+
+    # 종료 년도 월 일
+    driver.find_element_by_id('endYear').click()
+    driver.find_element_by_xpath('//*[@id="endYearDiv"]/ul/li[6]/a').click()
+    driver.find_element_by_id('endMonth').click()
+    driver.find_element_by_xpath('//*[@id="endMonthDiv"]/ul/li[12]/a').click()
+    driver.find_element_by_id('endDay').click()
+    driver.find_element_by_xpath('//*[@id="endDayDiv"]/ul/li[31]/a').click()
+    
+    if i == 0 :
+        # 여성 / 남성 -> tiem_gender_2
+        driver.find_element_by_id('item_gender_1').click()
+
+        # 10대
+        driver.find_element_by_id('item_age_11').click()
+        
+
+    # 검색
+    driver.find_element_by_xpath('//*[@id="content"]/div/div[2]/div[1]/div/form/fieldset/a/span').click()
+    time.sleep(2)
+
+    # 다운로드 후 뒤로가기
+    driver.find_element_by_xpath('//*[@id="content"]/div[1]/div[1]/div[1]/div/div/div/div/div/div[1]/div[4]/a').click()
+    time.sleep(2)
+    driver.back()
+
+    # 검색어 지우기
+    driver.find_element_by_xpath('//*[@id="content"]/div/div[2]/div[1]/div/form/fieldset/div/div[1]/div[1]/button/span').click()
+    driver.find_element_by_xpath('//*[@id="content"]/div/div[2]/div[1]/div/form/fieldset/div/div[1]/div[2]/button/span').click()
+    time.sleep(2)
+
+
