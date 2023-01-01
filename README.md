@@ -7,5 +7,5 @@
 
 ### Technology
 #### [📂 MachineLearning](https://github.com/ryunada/DataScientist_Study/tree/main/MachineLearning) 
-#### [📂 Computer Vision](https://github.com/ryunada/DataScientist_Study/tree/main/CoumputerVision) 
+#### [📂 Computer Vision](https://github.com/ryunada/DataScientist_Study/blob/main/Computer_Vision.md) 
 #### [📂 DeepLearning]()
