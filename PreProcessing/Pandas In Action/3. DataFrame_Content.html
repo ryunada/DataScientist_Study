@@ -1,0 +1,600 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>3. DataFrame_Content</title>
+</head>
+<body class='typora-export typora-export-show-outline typora-export-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-dataframe">3. DataFrame</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1-데이터-프레임의-개요">1. 데이터 프레임의 개요</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2-dataframe">2. DataFrame</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2-1-dataframe-불러오기--pdreadcsv">2-1. DataFrame 불러오기 :: pd.read_csv()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2-2-dataframe-생성--pddataframe">2-2. DataFrame 생성 :: pd.DataFrame()</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-dataframe-속성">3. DataFrame 속성</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-1-데이터-유형-확인--dfdtypes">3-1. 데이터 유형 확인 :: df.dtypes</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-1-1-데이터-유형별-개수-확인--dftypesvaluecounts">3-1-1. 데이터 유형별 개수 확인 :: df.types.value_counts()</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-2-인덱스행-레이블-확인--dfindex">3-2. 인덱스(행 레이블) 확인 :: df.index</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-3-columns열-레이블-확인--dfcolumns">3-3. columns(열 레이블) 확인 :: df.columns</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-4-차원-수-반환--dfndim">3-4. 차원 수 반환 :: df.ndim</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-5-차원을-튜플-형태로-반환--dfshape">3-5. 차원을 튜플 형태로 반환 :: df.shape</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-6-데이터-셋에-있는-값의-전체-개수-반환--dfsize">3-6. 데이터 셋에 있는 값의 전체 개수 반환 :: df.size</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-7-열-별로-유효한-값의-개수--dfcounts">3-7. 열 별로 유효한 값의 개수 :: df.counts()</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-7-1-결측값이-아닌-모든-값의-개수--dfcountsum">3-7-1. 결측값이 아닌 모든 값의 개수 :: df.count().sum()</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-8-열-반환">3-8. 열 반환</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-8-1-단일-열-선택--dfcolumnname-or-dfcolumnname">3-8-1. 단일 열 선택 :: df.column_name or df['column_name']</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-8-2-다중-열-선택--dfcolumnname1-columnname2">3-8-2. 다중 열 선택 :: df[['column_name1', 'column_name2']]</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-9-행-반환">3-9. 행 반환</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-9-1-상위-행-반환--dfhead">3-9-1. 상위 행 반환 :: df.head()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-9-2-하위-행-반환--dftail">3-9-2. 하위 행 반환 :: df.tail()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-9-3-임의-값-추출--dfsamplen">3-9-3. 임의 값 추출 :: df.sample(n)</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-10-고유값유니크-값-확인--dfnunique">3-10. 고유값(유니크 값) 확인 :: df.nunique()</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-dataframe-연산">4. DataFrame 연산</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-1-각-열의-최대값-반환--dfmax">4-1. 각 열의 최대값 반환 :: df.max()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-2-각열의-최소값-반환--dfmin">4-2. 각열의 최소값 반환 :: df.min()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-3-주어진-열에서-가장-큰-값을-가지는-행의-집합을-n개-추출--dfnlargest">4-3. 주어진 열에서 가장 큰 값을 가지는 행의 집합을 n개 추출 :: df.nlargest()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-4-주어진-열에서-가장-작은-값을-가지는-행의-집합을-n개-추출--dfsmallest">4-4. 주어진 열에서 가장 작은 값을 가지는 행의 집합을 n개 추출 :: df.smallest()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-5-각-열의-총합--dfsum">4-5. 각 열의 총합 :: df.sum()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-6-각-열의-평균--dfmean">4-6. 각 열의 평균 :: df.mean()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-7-각-열의-중앙값--dfmedian">4-7. 각 열의 중앙값 :: df.median()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-8-각-열의-최빈값--dfmode">4-8. 각 열의 최빈값 :: df.mode()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-9-각-열의-표준-편차--dfstd">4-9. 각 열의 표준 편차 :: df.std()</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-dataframe-필터링">5. DataFrame 필터링</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-1-데이터-선택">5-1. 데이터 선택</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-1-1-레이블을-통한-데이터-선택-단일-값--dfat">5-1-1. 레이블을 통한 데이터 선택 단일 값 :: df.at()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-1-2-레이블을-통한-데이터-선택--dfloc">5-1-2. 레이블을 통한 데이터 선택 :: df.loc()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-13-인덱스-값을-이용한-데이터-선택-단일-값--dfiat">5-1.3 인덱스 값을 이용한 데이터 선택 단일 값 :: df.iat()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-1-4-인덱스-값을-이용한-데이터-선택--dfiloc">5-1-4. 인덱스 값을 이용한 데이터 선택 :: df.iloc()</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-2-정렬">5-2. 정렬</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-2-1-하나-이상의-열에-해당하는-값을-기준으로-정렬--dfsortvalues">5-2-1. 하나 이상의 열에 해당하는 값을 기준으로 정렬 :: df.sort_values</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-2-2-인덱스-기준으로-정렬--dfsortindex">5-2-2. 인덱스 기준으로 정렬 :: df.sort_index()</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h5 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-2-2-1-행-인덱스-기준으로-정렬">5-2-2-1. 행 인덱스 기준으로 정렬</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h5 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-2-2-2-열-인덱스-기준으로-정렬">5-2-2-2. 열 인덱스 기준으로 정렬</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-3-인덱스-재설정">5-3. 인덱스 재설정</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-3-1-기존-인덱스-삭제하며-인덱스-재설정--setindex">5-3-1. 기존 인덱스 삭제하며 인덱스 재설정 :: set_index() </a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-3-2-기존-인덱스를-보존하며-인덱스-재설정--resetindex">5-3-2. 기존 인덱스를 보존하며 인덱스 재설정 :: reset_index()</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-4-조건">5-4. 조건</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-4-1-단일-조건-필터링">5-4-1. 단일 조건 필터링</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h5 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-4-1-1-dfdfcolname--조건">5-4-1-1. df[df['col_name'] == 조건]</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h5 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-4-1-2-dfdfcolname--조건">5-4-1-2. df[df['col_name'] != 조건]</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h5 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-4-1-3-dfcolnameisin">5-4-1-3. df['col_name'].isin()</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-4-2-다중-조건-필터링">5-4-2. 다중 조건 필터링</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h5 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-4-2-1-모든-조건-모두-충족--and">5-4-2-1. 모든 조건 모두 충족 :: AND</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h5 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-4-2-2-여러-조건-중-하나-이상-만족--or">5-4-2-2. 여러 조건 중 하나 이상 만족 :: OR</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h5 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-4-2-3-범위에-속하는-값--dfcolnamebetweenab">5-4-2-3. 범위에 속하는 값 :: df['col_name'].between(A,B)</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-4-3-반전--">5-4-3. 반전 :: ~</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-5-결측값nan-처리">5-5. 결측값(NaN) 처리</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-5-1-결측값nan-확인--dfisnull">5-5-1. 결측값(NaN) 확인 :: df.isnull()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-5-2-결측값nan이-아닌-값-확인--dfnotnull">5-5-2. 결측값(NaN)이 아닌 값 확인 :: df.notnull()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-5-3-결측값-임의의-값으로-변경--dfcolnamefillna">5-5-3. 결측값 임의의 값으로 변경 :: df['col_name'].fillna()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-5-4-결측값-행-제거--dfdropna">5-5-4. 결측값 행 제거 :: df.dropna()</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-6-중복-처리">5-6. 중복 처리</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-6-1-중복값-확인--dfduplicated">5-6-1. 중복값 확인 :: df.duplicated()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-6-1-중복-제거--dfdropduplicates">5-6-1. 중복 제거 :: df.drop_duplicates()</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-7-데이터-유형에-따라-열-선택--dfselectdtypes">5-7. 데이터 유형에 따라 열 선택 :: df.select_dtypes()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-8-데이터-유형-변환--dfcolnameastpye">5-8. 데이터 유형 변환 :: df['col_name'].astpye()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-9-열-또는-행-이름-변경--dfrename">5-9. 열 또는 행 이름 변경 :: df.rename()</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-10-매직-메서드">5-10. 매직 메서드</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-10-1-코드를-실행하고-실행하는데-걸리는-평균-시간을-계산--timeit">5-10-1. 코드를 실행하고 실행하는데 걸리는 평균 시간을 계산 :: %%timeit</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></ul></li></div></div><div id='write'  class=''><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n149"><a class="md-toc-inner" href="#3-dataframe">3. DataFrame</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n150"><a class="md-toc-inner" href="#1-데이터-프레임의-개요">1. 데이터 프레임의 개요</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n157"><a class="md-toc-inner" href="#2-dataframe">2. DataFrame</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n158"><a class="md-toc-inner" href="#2-1-dataframe-불러오기--pdreadcsv">2-1. DataFrame 불러오기 :: pd.read_csv()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n160"><a class="md-toc-inner" href="#2-2-dataframe-생성--pddataframe">2-2. DataFrame 생성 :: pd.DataFrame()</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n162"><a class="md-toc-inner" href="#3-dataframe-속성">3. DataFrame 속성</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n163"><a class="md-toc-inner" href="#3-1-데이터-유형-확인--dfdtypes">3-1. 데이터 유형 확인 :: df.dtypes</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n165"><a class="md-toc-inner" href="#3-1-1-데이터-유형별-개수-확인--dftypesvaluecounts">3-1-1. 데이터 유형별 개수 확인 :: df.types.value_counts()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n167"><a class="md-toc-inner" href="#3-2-인덱스행-레이블-확인--dfindex">3-2. 인덱스(행 레이블) 확인 :: df.index</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n169"><a class="md-toc-inner" href="#3-3-columns열-레이블-확인--dfcolumns">3-3. columns(열 레이블) 확인 :: df.columns</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n171"><a class="md-toc-inner" href="#3-4-차원-수-반환--dfndim">3-4. 차원 수 반환 :: df.ndim</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n173"><a class="md-toc-inner" href="#3-5-차원을-튜플-형태로-반환--dfshape">3-5. 차원을 튜플 형태로 반환 :: df.shape</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n175"><a class="md-toc-inner" href="#3-6-데이터-셋에-있는-값의-전체-개수-반환--dfsize">3-6. 데이터 셋에 있는 값의 전체 개수 반환 :: df.size</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n180"><a class="md-toc-inner" href="#3-7-열-별로-유효한-값의-개수--dfcounts">3-7. 열 별로 유효한 값의 개수 :: df.counts()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n185"><a class="md-toc-inner" href="#3-7-1-결측값이-아닌-모든-값의-개수--dfcountsum">3-7-1. 결측값이 아닌 모든 값의 개수 :: df.count().sum()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n187"><a class="md-toc-inner" href="#3-8-열-반환">3-8. 열 반환</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n188"><a class="md-toc-inner" href="#3-8-1-단일-열-선택--dfcolumnname-or-dfcolumnname">3-8-1. 단일 열 선택 :: df.column_name or df['column_name']</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n190"><a class="md-toc-inner" href="#3-8-2-다중-열-선택--dfcolumnname1-columnname2">3-8-2. 다중 열 선택 :: df[['column_name1', 'column_name2']]</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n192"><a class="md-toc-inner" href="#3-9-행-반환">3-9. 행 반환</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n193"><a class="md-toc-inner" href="#3-9-1-상위-행-반환--dfhead">3-9-1. 상위 행 반환 :: df.head()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n195"><a class="md-toc-inner" href="#3-9-2-하위-행-반환--dftail">3-9-2. 하위 행 반환 :: df.tail()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n197"><a class="md-toc-inner" href="#3-9-3-임의-값-추출--dfsamplen">3-9-3. 임의 값 추출 :: df.sample(n)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n199"><a class="md-toc-inner" href="#3-10-고유값유니크-값-확인--dfnunique">3-10. 고유값(유니크 값) 확인 :: df.nunique()</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n201"><a class="md-toc-inner" href="#4-dataframe-연산">4. DataFrame 연산</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n202"><a class="md-toc-inner" href="#4-1-각-열의-최대값-반환--dfmax">4-1. 각 열의 최대값 반환 :: df.max()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n204"><a class="md-toc-inner" href="#4-2-각열의-최소값-반환--dfmin">4-2. 각열의 최소값 반환 :: df.min()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n206"><a class="md-toc-inner" href="#4-3-주어진-열에서-가장-큰-값을-가지는-행의-집합을-n개-추출--dfnlargest">4-3. 주어진 열에서 가장 큰 값을 가지는 행의 집합을 n개 추출 :: df.nlargest()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n208"><a class="md-toc-inner" href="#4-4-주어진-열에서-가장-작은-값을-가지는-행의-집합을-n개-추출--dfsmallest">4-4. 주어진 열에서 가장 작은 값을 가지는 행의 집합을 n개 추출 :: df.smallest()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n210"><a class="md-toc-inner" href="#4-5-각-열의-총합--dfsum">4-5. 각 열의 총합 :: df.sum()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n212"><a class="md-toc-inner" href="#4-6-각-열의-평균--dfmean">4-6. 각 열의 평균 :: df.mean()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n214"><a class="md-toc-inner" href="#4-7-각-열의-중앙값--dfmedian">4-7. 각 열의 중앙값 :: df.median()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n216"><a class="md-toc-inner" href="#4-8-각-열의-최빈값--dfmode">4-8. 각 열의 최빈값 :: df.mode()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n218"><a class="md-toc-inner" href="#4-9-각-열의-표준-편차--dfstd">4-9. 각 열의 표준 편차 :: df.std()</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n220"><a class="md-toc-inner" href="#5-dataframe-필터링">5. DataFrame 필터링</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n221"><a class="md-toc-inner" href="#5-1-데이터-선택">5-1. 데이터 선택</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n222"><a class="md-toc-inner" href="#5-1-1-레이블을-통한-데이터-선택-단일-값--dfat">5-1-1. 레이블을 통한 데이터 선택 단일 값 :: df.at()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n224"><a class="md-toc-inner" href="#5-1-2-레이블을-통한-데이터-선택--dfloc">5-1-2. 레이블을 통한 데이터 선택 :: df.loc()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n226"><a class="md-toc-inner" href="#5-13-인덱스-값을-이용한-데이터-선택-단일-값--dfiat">5-1.3 인덱스 값을 이용한 데이터 선택 단일 값 :: df.iat()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n228"><a class="md-toc-inner" href="#5-1-4-인덱스-값을-이용한-데이터-선택--dfiloc">5-1-4. 인덱스 값을 이용한 데이터 선택 :: df.iloc()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n230"><a class="md-toc-inner" href="#5-2-정렬">5-2. 정렬</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n231"><a class="md-toc-inner" href="#5-2-1-하나-이상의-열에-해당하는-값을-기준으로-정렬--dfsortvalues">5-2-1. 하나 이상의 열에 해당하는 값을 기준으로 정렬 :: df.sort_values</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n233"><a class="md-toc-inner" href="#5-2-2-인덱스-기준으로-정렬--dfsortindex">5-2-2. 인덱스 기준으로 정렬 :: df.sort_index()</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n234"><a class="md-toc-inner" href="#5-2-2-1-행-인덱스-기준으로-정렬">5-2-2-1. 행 인덱스 기준으로 정렬</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n235"><a class="md-toc-inner" href="#5-2-2-2-열-인덱스-기준으로-정렬">5-2-2-2. 열 인덱스 기준으로 정렬</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n245"><a class="md-toc-inner" href="#5-3-인덱스-재설정">5-3. 인덱스 재설정</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n246"><a class="md-toc-inner" href="#5-3-1-기존-인덱스-삭제하며-인덱스-재설정--setindex">5-3-1. 기존 인덱스 삭제하며 인덱스 재설정 :: set_index() </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n248"><a class="md-toc-inner" href="#5-3-2-기존-인덱스를-보존하며-인덱스-재설정--resetindex">5-3-2. 기존 인덱스를 보존하며 인덱스 재설정 :: reset_index()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n250"><a class="md-toc-inner" href="#5-4-조건">5-4. 조건</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n251"><a class="md-toc-inner" href="#5-4-1-단일-조건-필터링">5-4-1. 단일 조건 필터링</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n252"><a class="md-toc-inner" href="#5-4-1-1-dfdfcolname--조건">5-4-1-1. df[df['col_name'] == 조건]</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n254"><a class="md-toc-inner" href="#5-4-1-2-dfdfcolname--조건">5-4-1-2. df[df['col_name'] != 조건]</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n256"><a class="md-toc-inner" href="#5-4-1-3-dfcolnameisin">5-4-1-3. df['col_name'].isin()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n258"><a class="md-toc-inner" href="#5-4-2-다중-조건-필터링">5-4-2. 다중 조건 필터링</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n259"><a class="md-toc-inner" href="#5-4-2-1-모든-조건-모두-충족--and">5-4-2-1. 모든 조건 모두 충족 :: AND</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n261"><a class="md-toc-inner" href="#5-4-2-2-여러-조건-중-하나-이상-만족--or">5-4-2-2. 여러 조건 중 하나 이상 만족 :: OR</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n263"><a class="md-toc-inner" href="#5-4-2-3-범위에-속하는-값--dfcolnamebetweenab">5-4-2-3. 범위에 속하는 값 :: df['col_name'].between(A,B)</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n265"><a class="md-toc-inner" href="#5-4-3-반전--">5-4-3. 반전 :: ~</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n267"><a class="md-toc-inner" href="#5-5-결측값nan-처리">5-5. 결측값(NaN) 처리</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n268"><a class="md-toc-inner" href="#5-5-1-결측값nan-확인--dfisnull">5-5-1. 결측값(NaN) 확인 :: df.isnull()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n270"><a class="md-toc-inner" href="#5-5-2-결측값nan이-아닌-값-확인--dfnotnull">5-5-2. 결측값(NaN)이 아닌 값 확인 :: df.notnull()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n272"><a class="md-toc-inner" href="#5-5-3-결측값-임의의-값으로-변경--dfcolnamefillna">5-5-3. 결측값 임의의 값으로 변경 :: df['col_name'].fillna()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n277"><a class="md-toc-inner" href="#5-5-4-결측값-행-제거--dfdropna">5-5-4. 결측값 행 제거 :: df.dropna()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n279"><a class="md-toc-inner" href="#5-6-중복-처리">5-6. 중복 처리</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n280"><a class="md-toc-inner" href="#5-6-1-중복값-확인--dfduplicated">5-6-1. 중복값 확인 :: df.duplicated()</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n282"><a class="md-toc-inner" href="#5-6-1-중복-제거--dfdropduplicates">5-6-1. 중복 제거 :: df.drop_duplicates()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n284"><a class="md-toc-inner" href="#5-7-데이터-유형에-따라-열-선택--dfselectdtypes">5-7. 데이터 유형에 따라 열 선택 :: df.select_dtypes()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n286"><a class="md-toc-inner" href="#5-8-데이터-유형-변환--dfcolnameastpye">5-8. 데이터 유형 변환 :: df['col_name'].astpye()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n288"><a class="md-toc-inner" href="#5-9-열-또는-행-이름-변경--dfrename">5-9. 열 또는 행 이름 변경 :: df.rename()</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n290"><a class="md-toc-inner" href="#5-10-매직-메서드">5-10. 매직 메서드</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n291"><a class="md-toc-inner" href="#5-10-1-코드를-실행하고-실행하는데-걸리는-평균-시간을-계산--timeit">5-10-1. 코드를 실행하고 실행하는데 걸리는 평균 시간을 계산 :: %%timeit</a></span></p></div><h1 id='3-dataframe'><span>3. DataFrame</span></h1><h2 id='1-데이터-프레임의-개요'><span>1. 데이터 프레임의 개요</span></h2><ul><li><p><span>행과 열이 있는 2차원 데이터 테이블</span></p></li><li><p><span>Sreies들을 하나의 열로 취급한 집합</span></p></li></ul><p><img src="https://p.ipic.vip/dp6d1h.png" width='50%'></p><h2 id='2-dataframe'><span>2. DataFrame</span></h2><h3 id='2-1-dataframe-불러오기--pdreadcsv'><span>2-1. DataFrame 불러오기 :: pd.read_csv()</span></h3><p>&nbsp;</p><h3 id='2-2-dataframe-생성--pddataframe'><span>2-2. DataFrame 생성 :: pd.DataFrame()</span></h3><p>&nbsp;</p><h2 id='3-dataframe-속성'><span>3. DataFrame 속성</span></h2><h3 id='3-1-데이터-유형-확인--dfdtypes'><span>3-1. 데이터 유형 확인 :: df.dtypes</span></h3><p>&nbsp;</p><h4 id='3-1-1-데이터-유형별-개수-확인--dftypesvaluecounts'><span>3-1-1. 데이터 유형별 개수 확인 :: df.types.value_counts()</span></h4><p>&nbsp;</p><h3 id='3-2-인덱스행-레이블-확인--dfindex'><span>3-2. 인덱스(행 레이블) 확인 :: df.index</span></h3><p>&nbsp;</p><h3 id='3-3-columns열-레이블-확인--dfcolumns'><span>3-3. columns(열 레이블) 확인 :: df.columns</span></h3><p>&nbsp;</p><h3 id='3-4-차원-수-반환--dfndim'><span>3-4. 차원 수 반환 :: df.ndim</span></h3><p>&nbsp;</p><h3 id='3-5-차원을-튜플-형태로-반환--dfshape'><span>3-5. 차원을 튜플 형태로 반환 :: df.shape</span></h3><p>&nbsp;</p><h3 id='3-6-데이터-셋에-있는-값의-전체-개수-반환--dfsize'><span>3-6. 데이터 셋에 있는 값의 전체 개수 반환 :: df.size</span></h3><ul><li><p><span>NaN과 같은 결측값도 개수에 포함</span></p></li></ul><p>&nbsp;</p><h3 id='3-7-열-별로-유효한-값의-개수--dfcounts'><span>3-7. 열 별로 유효한 값의 개수 :: df.counts()</span></h3><ul><li><p><span>결측값 제외</span></p></li></ul><p>&nbsp;</p><h4 id='3-7-1-결측값이-아닌-모든-값의-개수--dfcountsum'><span>3-7-1. 결측값이 아닌 모든 값의 개수 :: df.count().sum()</span></h4><p>&nbsp;</p><h3 id='3-8-열-반환'><span>3-8. 열 반환</span></h3><h4 id='3-8-1-단일-열-선택--dfcolumnname-or-dfcolumnname'><span>3-8-1. 단일 열 선택 :: df.column_name or df[&#39;column_name&#39;]</span></h4><p>&nbsp;</p><h4 id='3-8-2-다중-열-선택--dfcolumnname1-columnname2'><span>3-8-2. 다중 열 선택 :: df[[&#39;column_name1&#39;, &#39;column_name2&#39;]]</span></h4><p>&nbsp;</p><h3 id='3-9-행-반환'><span>3-9. 행 반환</span></h3><h4 id='3-9-1-상위-행-반환--dfhead'><span>3-9-1. 상위 행 반환 :: df.head()</span></h4><p>&nbsp;</p><h4 id='3-9-2-하위-행-반환--dftail'><span>3-9-2. 하위 행 반환 :: df.tail()</span></h4><p>&nbsp;</p><h4 id='3-9-3-임의-값-추출--dfsamplen'><span>3-9-3. 임의 값 추출 :: df.sample(n)</span></h4><p>&nbsp;</p><h3 id='3-10-고유값유니크-값-확인--dfnunique'><span>3-10. 고유값(유니크 값) 확인 :: df.nunique()</span></h3><p>&nbsp;</p><h2 id='4-dataframe-연산'><span>4. DataFrame 연산</span></h2><h3 id='4-1-각-열의-최대값-반환--dfmax'><span>4-1. 각 열의 최대값 반환 :: df.max()</span></h3><p>&nbsp;</p><h3 id='4-2-각열의-최소값-반환--dfmin'><span>4-2. 각열의 최소값 반환 :: df.min()</span></h3><p>&nbsp;</p><h3 id='4-3-주어진-열에서-가장-큰-값을-가지는-행의-집합을-n개-추출--dfnlargest'><span>4-3. 주어진 열에서 가장 큰 값을 가지는 행의 집합을 n개 추출 :: df.nlargest()</span></h3><p>&nbsp;</p><h3 id='4-4-주어진-열에서-가장-작은-값을-가지는-행의-집합을-n개-추출--dfsmallest'><span>4-4. 주어진 열에서 가장 작은 값을 가지는 행의 집합을 n개 추출 :: df.smallest()</span></h3><p>&nbsp;</p><h3 id='4-5-각-열의-총합--dfsum'><span>4-5. 각 열의 총합 :: df.sum()</span></h3><p>&nbsp;</p><h3 id='4-6-각-열의-평균--dfmean'><span>4-6. 각 열의 평균 :: df.mean()</span></h3><p>&nbsp;</p><h3 id='4-7-각-열의-중앙값--dfmedian'><span>4-7. 각 열의 중앙값 :: df.median()</span></h3><p>&nbsp;</p><h3 id='4-8-각-열의-최빈값--dfmode'><span>4-8. 각 열의 최빈값 :: df.mode()</span></h3><p>&nbsp;</p><h3 id='4-9-각-열의-표준-편차--dfstd'><span>4-9. 각 열의 표준 편차 :: df.std()</span></h3><p>&nbsp;</p><h2 id='5-dataframe-필터링'><span>5. DataFrame 필터링</span></h2><h3 id='5-1-데이터-선택'><span>5-1. 데이터 선택</span></h3><h4 id='5-1-1-레이블을-통한-데이터-선택-단일-값--dfat'><span>5-1-1. 레이블을 통한 데이터 선택 단일 값 :: df.at()</span></h4><p>&nbsp;</p><h4 id='5-1-2-레이블을-통한-데이터-선택--dfloc'><span>5-1-2. 레이블을 통한 데이터 선택 :: df.loc()</span></h4><p>&nbsp;</p><h4 id='5-13-인덱스-값을-이용한-데이터-선택-단일-값--dfiat'><span>5-1.3 인덱스 값을 이용한 데이터 선택 단일 값 :: df.iat()</span></h4><p>&nbsp;</p><h4 id='5-1-4-인덱스-값을-이용한-데이터-선택--dfiloc'><span>5-1-4. 인덱스 값을 이용한 데이터 선택 :: df.iloc()</span></h4><p>&nbsp;</p><h3 id='5-2-정렬'><span>5-2. 정렬</span></h3><h4 id='5-2-1-하나-이상의-열에-해당하는-값을-기준으로-정렬--dfsortvalues'><span>5-2-1. 하나 이상의 열에 해당하는 값을 기준으로 정렬 :: df.sort_values</span></h4><p>&nbsp;</p><h4 id='5-2-2-인덱스-기준으로-정렬--dfsortindex'><span>5-2-2. 인덱스 기준으로 정렬 :: df.sort_index()</span></h4><h5 id='5-2-2-1-행-인덱스-기준으로-정렬'><span>5-2-2-1. 행 인덱스 기준으로 정렬</span></h5><h5 id='5-2-2-2-열-인덱스-기준으로-정렬'><span>5-2-2-2. 열 인덱스 기준으로 정렬</span></h5><ul><li><p><span>axis</span></p><ul><li><p><span>&#39;columns&#39;</span></p></li><li><p><span>1</span></p></li></ul></li></ul><p>&nbsp;</p><h3 id='5-3-인덱스-재설정'><span>5-3. 인덱스 재설정</span></h3><h4 id='5-3-1-기존-인덱스-삭제하며-인덱스-재설정--setindex'><span>5-3-1. 기존 인덱스 삭제하며 인덱스 재설정 :: set_index() </span></h4><p>&nbsp;</p><h4 id='5-3-2-기존-인덱스를-보존하며-인덱스-재설정--resetindex'><span>5-3-2. 기존 인덱스를 보존하며 인덱스 재설정 :: reset_index()</span></h4><p>&nbsp;</p><h3 id='5-4-조건'><span>5-4. 조건</span></h3><h4 id='5-4-1-단일-조건-필터링'><span>5-4-1. 단일 조건 필터링</span></h4><h5 id='5-4-1-1-dfdfcolname--조건'><span>5-4-1-1. df[df[&#39;col_name&#39;] == 조건]</span></h5><p>&nbsp;</p><h5 id='5-4-1-2-dfdfcolname--조건'><span>5-4-1-2. df[df[&#39;col_name&#39;] != 조건]</span></h5><p>&nbsp;</p><h5 id='5-4-1-3-dfcolnameisin'><span>5-4-1-3. df[&#39;col_name&#39;].isin()</span></h5><p>&nbsp;</p><h4 id='5-4-2-다중-조건-필터링'><span>5-4-2. 다중 조건 필터링</span></h4><h5 id='5-4-2-1-모든-조건-모두-충족--and'><span>5-4-2-1. 모든 조건 모두 충족 :: AND</span></h5><p>&nbsp;</p><h5 id='5-4-2-2-여러-조건-중-하나-이상-만족--or'><span>5-4-2-2. 여러 조건 중 하나 이상 만족 :: OR</span></h5><p>&nbsp;</p><h5 id='5-4-2-3-범위에-속하는-값--dfcolnamebetweenab'><span>5-4-2-3. 범위에 속하는 값 :: df[&#39;col_name&#39;].between(A,B)</span></h5><p>&nbsp;</p><h4 id='5-4-3-반전--'><span>5-4-3. 반전 :: ~</span></h4><p>&nbsp;</p><h3 id='5-5-결측값nan-처리'><span>5-5. 결측값(NaN) 처리</span></h3><h4 id='5-5-1-결측값nan-확인--dfisnull'><span>5-5-1. 결측값(NaN) 확인 :: df.isnull()</span></h4><p>&nbsp;</p><h4 id='5-5-2-결측값nan이-아닌-값-확인--dfnotnull'><span>5-5-2. 결측값(NaN)이 아닌 값 확인 :: df.notnull()</span></h4><p>&nbsp;</p><h4 id='5-5-3-결측값-임의의-값으로-변경--dfcolnamefillna'><span>5-5-3. 결측값 임의의 값으로 변경 :: df[&#39;col_name&#39;].fillna()</span></h4><ul><li><p><span>임의로 값을 선택하여 null값을 대체하면 데이터가 왜곡될 수 있음</span></p></li></ul><p>&nbsp;</p><h4 id='5-5-4-결측값-행-제거--dfdropna'><span>5-5-4. 결측값 행 제거 :: df.dropna()</span></h4><p>&nbsp;</p><h3 id='5-6-중복-처리'><span>5-6. 중복 처리</span></h3><h4 id='5-6-1-중복값-확인--dfduplicated'><span>5-6-1. 중복값 확인 :: df.duplicated()</span></h4><p>&nbsp;</p><h4 id='5-6-1-중복-제거--dfdropduplicates'><span>5-6-1. 중복 제거 :: df.drop_duplicates()</span></h4><p>&nbsp;</p><h3 id='5-7-데이터-유형에-따라-열-선택--dfselectdtypes'><span>5-7. 데이터 유형에 따라 열 선택 :: df.select_dtypes()</span></h3><p>&nbsp;</p><h3 id='5-8-데이터-유형-변환--dfcolnameastpye'><span>5-8. 데이터 유형 변환 :: df[&#39;col_name&#39;].astpye()</span></h3><p>&nbsp;</p><h3 id='5-9-열-또는-행-이름-변경--dfrename'><span>5-9. 열 또는 행 이름 변경 :: df.rename()</span></h3><p>&nbsp;</p><h3 id='5-10-매직-메서드'><span>5-10. 매직 메서드</span></h3><h4 id='5-10-1-코드를-실행하고-실행하는데-걸리는-평균-시간을-계산--timeit'><span>5-10-1. 코드를 실행하고 실행하는데 걸리는 평균 시간을 계산 :: %%timeit</span></h4><p>&nbsp;</p><p>&nbsp;</p></div></div>
+
+<script>(function (){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>
